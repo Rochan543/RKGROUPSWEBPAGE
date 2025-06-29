@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #004aad, #00b2ff);
+  margin: 0;
+  padding: 30px;
+}
+
+.profile-display {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #004aad;
+  overflow: hidden;
+}
+
+/* ✅ Brighter watermark centered in the profile box */
+.profile-display::after {
+  content: "";
+  background: url("assets/RK_LOGO_1.png") no-repeat center center;
+  background-size: 200px;
+  opacity: 0.20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* ✅ Ensure content stays above watermark */
+.profile-display > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Back arrow button */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #004aad;
+  text-decoration: none;
+  z-index: 2;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+
+.back-arrow:hover {
+  background: #f0f0f0;
+}
+
+h2 {
+  text-align: center;
+  color: #004aad;
+}
+
+.photo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photo-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 5px #004aad;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.info-list li strong {
+  width: 110px;
+  display: inline-block;
+  color: #004aad;
+}
+
+.info-list a {
+  color: #004aad;
+  text-decoration: none;
+}
+
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003080;
+}

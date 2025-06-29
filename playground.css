@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #004aad, #00b2ff);
+}
+
+.playground-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.playground-container h2 {
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.platforms {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.platform {
+  width: 150px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.platform:hover {
+  transform: scale(1.05);
+}
+
+.platform img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.platform p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* ✅ Highlighted platform */
+.platform.highlighted {
+  border: 2px solid #004aad;
+  background-color: #e6f0ff;
+}
+
+/* ✅ Modal overlay */
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ✅ Modal box */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #004aad;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:first-child {
+  background: #004aad;
+  color: white;
+}
+
+.modal-content button:last-child {
+  background: #ccc;
+}
+/* ✅ Back Arrow Button */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  color: #004aad;
+  text-decoration: none;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+}
+
+.back-arrow:hover {
+  background: #e0e0e0;
+}
+

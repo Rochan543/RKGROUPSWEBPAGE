@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Coding Session</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      text-align: center;
+      color: #004aad;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px 10px;
+      background-color: #004aad;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      height: 70px;
+      width: 70px;
+      border-radius: 10px;
+    }
+
+    .brand-title {
+      text-align: left;
+    }
+
+    .brand-title h3,
+    .brand-title p {
+      margin: 0;
+      color: white;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: #004aad;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #004aad;
+    }
+
+    .input-field {
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 300px;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .checkbox-box {
+      width: 130px;
+      height: 130px;
+      border: 3px solid #007BFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: white;
+      color: #004aad;
+    }
+
+    .checkbox-box.green {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #4CAF50;
+    }
+
+    .congrats-message {
+      display: none;
+      font-size: 1.8rem;
+      color: #ff4081;
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .instructions {
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #004aad;
+      color: white;
+      border-radius: 10px;
+      text-align: left;
+      max-width: 700px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .instructions h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #004aad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: white;
+    }
+
+    .footer img {
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+    }
+
+    .footer-text {
+      text-align: left;
+      color: white;
+    }
+
+    .footer-text h4 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .footer-text p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-note {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+      font-size: 14px;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .checkbox-box {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+      }
+
+      .brand-title h3 {
+        font-size: 1.3rem;
+      }
+
+      .brand-title p {
+        font-size: 0.9rem;
+      }
+
+      .instructions {
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      .footer-text h4 {
+        font-size: 1.1rem;
+      }
+
+      .footer-text p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO AND TITLE -->
+  <div class="header">
+    <img src="assets/RK LOGO.jpg" alt="Logo" />
+    <div class="brand-title">
+      <h3>REPATI KOSAM</h3>
+      <p>Talk Bold. Code Smart. Rise Ahead.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Welcome to the Live Coding Session 1</h1>
+
+    <div class="input-field">
+      <input type="text" id="username" placeholder="Enter your name here" required>
+    </div>
+
+    <h2>Select your questions set</h2>
+
+    <div class="checkbox-container">
+      <div class="checkbox-box" onclick="selectSet(this, 'Set 1')">Set 1</div>
+      <div class="checkbox-box" onclick="selectSet(this, 'Set 2')">Set 2</div>
+    </div>
+
+    <div id="congrats" class="congrats-message">🎉 Congratulations! 🎉</div>
+
+    <div class="instructions">
+      <h3>📌 Important Instructions – Please Read Carefully</h3>
+      <ul>
+        <li><strong>Camera Requirements:</strong> Keep both your <strong>laptop and mobile cameras ON</strong> at all times.</li>
+        <li><strong>Microphone:</strong> Ensure your <strong>mic remains ON</strong> during the entire session unless otherwise directed.</li>
+        <li><strong>No Malpractice:</strong> Any suspicious activity will result in immediate removal and disqualification from future events.</li>
+        <li><strong>Internet:</strong> A stable internet connection is mandatory throughout the session.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <div class="footer">
+    <img src="assets/RK LOGO.jpg" alt="Logo" />
+    <div class="footer-text">
+      <h4>REPATI KOSAM</h4>
+      <p>Talk Bold. Code Smart. Rise Ahead.</p>
+    </div>
+    <div class="footer-note">2025 © All rights reserved by REPATI KOSAM</div>
+  </div>
+
+  <!-- Confetti & Script -->
+  <canvas id="confetti-canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function selectSet(element, setName) {
+      const name = document.getElementById("username").value.trim();
+      if (name === "") {
+        alert("Please enter your name before selecting a set.");
+        return;
+      }
+
+      element.classList.add("green");
+
+      const congrats = document.getElementById("congrats");
+      congrats.innerText = `🎉 Congratulations ${name}! You selected ${setName}. 🎉`;
+      congrats.style.display = "block";
+
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
+      document.querySelectorAll('.checkbox-box').forEach(box => box.onclick = null);
+    }
+  </script>
+
+</body>
+</html>

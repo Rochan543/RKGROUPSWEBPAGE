@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REPATI KOSAM | Home</title>
+  <link rel="stylesheet" href="home.css" />
+
+  <!-- ✅ CodeMirror Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/clike/clike.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-section">
+          <img src="assets/RK LOGO.jpg" alt="Logo" />
+          <h2>REPATI KOSAM</h2>
+          <p>TALK BOLD. SMART CODE. RISE AHEAD.</p>
+        </div>
+        <nav class="nav-links">
+          <a href="#" id="liveCodingBtn">👨‍💻 Live Coding Session</a>
+          <a href="#">🎤 Mock Session</a>
+          <a href="#">📅 Schedule Meeting</a>
+          <a href="profile-display.html">👤 Profile</a>
+          <a href="#">📝 Assignment Sessions</a>
+          <a href="playground.html">💻 Code Playground</a>
+        </nav>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </aside>
+
+      <div class="content-wrapper">
+        <main class="main-content">
+          <div id="welcomeUser" class="welcome-text">Welcome!</div>
+          <h1>Welcome to REPATI KOSAM</h1>
+          <p>Select any option from the sidebar to continue.</p>
+
+          <!-- ✅ Dynamic Coding Editor Here -->
+          <div id="liveCodingEditorContainer"></div>
+        </main>
+
+        <aside class="right-widgets">
+          <div class="profile-photo-widget">
+            <img id="userPhoto" src="assets/default-user.png" alt="User Photo" />
+          </div>
+
+          <div class="widget">
+            <h3>🏆 Leaderboard</h3>
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody class="scrollable-body">
+                <tr><td>1</td><td>Abhinav R</td><td>1980</td></tr>
+                <tr><td>2</td><td>Sai Kumar</td><td>1925</td></tr>
+                <tr><td>3</td><td>Meghana A</td><td>1890</td></tr>
+                <tr><td>4</td><td>Ravi Teja</td><td>1845</td></tr>
+                <tr><td>5</td><td>Nikhil B</td><td>1810</td></tr>
+                <tr><td>6</td><td>Vamsi Krishna</td><td>1785</td></tr>
+                <tr><td>7</td><td>Kavya Reddy</td><td>1760</td></tr>
+                <tr><td>8</td><td>Shalini M</td><td>1710</td></tr>
+                <tr><td>9</td><td>Rohit D</td><td>1680</td></tr>
+                <tr><td>10</td><td>Harsha V</td><td>1655</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="widget">
+            <h3>📅 Today's Events</h3>
+            <ul>
+              <li>10:00 AM - DSA Live</li>
+              <li>2:00 PM - Mock Interview</li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            <h3>📌 Upcoming (This Month)</h3>
+            <ul>
+              <li>Jul 3 - Resume Review</li>
+              <li>Jul 10 - Group Discussion</li>
+              <li>Jul 22 - Coding Contest</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="home.js"></script>
+</body>
+</html>

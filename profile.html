@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REPATI KOSAM | Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div class="profile-form-wrapper">
+    <form id="profileForm">
+      <h2>Profile Information</h2>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" required />
+
+      <label for="college">College Name</label>
+      <input type="text" id="college" required />
+
+      <label for="area">Area</label>
+      <input type="text" id="area" required />
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" accept="image/*" />
+      <img id="photoPreview" alt="Preview" class="photo-preview" style="display:none;" />
+      <div class="photo-buttons" style="display: none;" id="photoButtons">
+        <button type="button" id="removePhotoBtn" class="small-btn">Remove Photo</button>
+      </div>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="email">Email ID</label>
+      <input type="email" id="email" required />
+
+      <label for="linkedin">LinkedIn Profile</label>
+      <input type="url" id="linkedin" />
+
+      <label for="leetcode">LeetCode Profile</label>
+      <input type="url" id="leetcode" />
+
+      <label for="hackerrank">HackerRank Profile</label>
+      <input type="url" id="hackerrank" />
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" accept=".pdf,.doc,.docx" />
+      <span id="resumeLabel">No file chosen</span>
+
+      <button type="submit">Submit Profile</button>
+    </form>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

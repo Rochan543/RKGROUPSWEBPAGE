@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Profile | REPATI KOSAM</title>
+  <link rel="stylesheet" href="profile-display.css" />
+</head>
+<body>
+  <div class="profile-display">
+    <!-- ✅ Back Arrow Button -->
+    <a href="home.html" class="back-arrow" title="Back to Home">&#8592;</a>
+
+    <h2>Your Profile</h2>
+
+    <div class="photo-container">
+      <img id="displayPhoto" src="assets/default-user.png" alt="User Photo" />
+    </div>
+
+    <ul class="info-list">
+      <li><strong>Name:</strong> <span id="displayName"></span></li>
+      <li><strong>College:</strong> <span id="displayCollege"></span></li>
+      <li><strong>Area:</strong> <span id="displayArea"></span></li>
+      <li><strong>Phone:</strong> <span id="displayPhone"></span></li>
+      <li><strong>Email:</strong> <span id="displayEmail"></span></li>
+      <li><strong>LinkedIn:</strong> <a id="displayLinkedIn" href="#" target="_blank">View</a></li>
+      <li><strong>LeetCode:</strong> <a id="displayLeetCode" href="#" target="_blank">View</a></li>
+      <li><strong>HackerRank:</strong> <a id="displayHackerRank" href="#" target="_blank">View</a></li>
+      <li><strong>Resume:</strong> <span id="displayResume"></span></li>
+    </ul>
+
+    <button onclick="window.location.href='profile.html'">Edit Profile</button>
+  </div>
+
+  <script src="profile-display.js"></script>
+</body>
+</html>

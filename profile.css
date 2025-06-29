@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #004aad, #00b2ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: url("assets/RK LOGO.jpg") no-repeat center center;
+  background-size: 300px;
+  opacity: 0.05;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.profile-form-wrapper {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="file"] {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#photoPreview {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#resumeLabel {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #004aad;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #004aad;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003080;
+}
+
+/* Small button for remove photo */
+.small-btn {
+  background-color: #ff4d4d;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background-color: #cc0000;
+}
+
+.photo-buttons {
+  margin-top: 8px;
+}
